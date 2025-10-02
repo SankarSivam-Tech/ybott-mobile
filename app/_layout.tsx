@@ -1,13 +1,11 @@
-import { Stack } from "expo-router";
-import { View } from "react-native";
-import "../global.css";
+import { Slot } from 'expo-router';
+import { View } from 'react-native';
+import '../global.css';
 
-export default function App() {
+export default function Layout() {
   return (
-    <View className="flex-1 ">
-      <Stack screenOptions={{ headerShown: false }}>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-      </Stack>
-    </View>
-  );
+       <View className='flex-1'>
+        <Slot />
+      </View>
+   );
 }
